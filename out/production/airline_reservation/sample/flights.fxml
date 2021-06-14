@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Pane id="flightRightSide">
+            <children>
+                <VBox prefHeight="565.0" prefWidth="821.0" styleClass="otherSide" stylesheets="@style.css">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="128.0" prefWidth="256.0" text="Available Flights" textAlignment="CENTER">
+                            <font>
+                                <Font name="Comic Sans MS Bold" size="28.0" />
+                            </font>
+                        </Label>
+                        <TableView prefHeight="470.0" prefWidth="693.0" stylesheets="@style.css">
+                            <columns>
+                                <TableColumn prefWidth="75.0" text="FlightID" />
+                                <TableColumn prefWidth="116.0" text="Flight Name" />
+                                <TableColumn prefWidth="77.0" text="From" />
+                                <TableColumn prefWidth="66.0" text="To" />
+                                <TableColumn prefWidth="93.0" text="Date" />
+                                <TableColumn prefWidth="140.0" text="Departure time" />
+                                <TableColumn prefWidth="123.0" text="Arrival Time" />
+                                <TableColumn prefWidth="118.0" text="Amount" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+            <Button layoutX="350.0" layoutY="520.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="107.0" stylesheets="@style.css" text="Book Now!">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+            </children>
+        </Pane>
+    </children>
+</Pane>

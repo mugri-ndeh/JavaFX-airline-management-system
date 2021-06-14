@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="1070.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Login">
+    <children>
+        <VBox id="sidebar" prefHeight="655.0" prefWidth="291.0" stylesheets="@style.css">
+            <children>
+                <Label alignment="CENTER" prefHeight="133.0" prefWidth="291.0" text="Maestro Airlines">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Line endX="184.6360321044922" endY="-20.71321678161621" startX="472.1004943847656" startY="-20.713354110717773" stroke="#316879" strokeWidth="5.0" />
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="234.0" prefWidth="291.0" text="Login">
+                    <font>
+                        <Font name="Consolas Bold" size="59.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <Pane layoutX="291.0" prefHeight="655.0" prefWidth="782.0" style="-fx-background-color: #316879;" styleClass="otherSide">
+            <children>
+                <Pane id="loginForm" layoutX="168.0" layoutY="117.0" prefHeight="361.0" prefWidth="397.0" stylesheets="@style.css">
+                    <children>
+                        <Label alignment="CENTER" prefHeight="66.0" prefWidth="137.0" text="Login">
+                            <font>
+                                <Font name="System Bold" size="20.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="21.0" layoutY="119.0" prefHeight="26.0" prefWidth="113.0" text="Username">
+                            <font>
+                                <Font name="Consolas" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="21.0" layoutY="181.0" prefHeight="26.0" prefWidth="115.0" text="Password">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="userName" layoutX="164.0" layoutY="116.0" />
+                        <TextField fx:id="password" layoutX="164.0" layoutY="177.0" />
+                        <Button id="login" layoutX="116.0" layoutY="254.0" mnemonicParsing="false" onAction="#loginToHome" prefHeight="30.0" prefWidth="165.0" styleClass="buttonM" stylesheets="@style.css" text="Login" />
+                        <Label layoutX="182.0" layoutY="301.0" />
+                  <Label layoutX="87.0" layoutY="311.0" onMouseClicked="#register" text="Don't have an account? Register here " textFill="#f47a60" />
+                    </children>
+                </Pane>
+            <Label fx:id="userType" layoutX="37.0" layoutY="17.0" text="Label" textFill="#f47a60">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

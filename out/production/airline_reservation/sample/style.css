@@ -1,0 +1,67 @@
+.button{
+    -fx-background-color: #7fe7dc;
+}
+.buttonM{
+    -fx-background-color: #316879;
+}
+
+.button:hover{
+    -fx-background-color: #f47a60;
+}
+.separator{
+    -fx-background-color: #316879;
+}
+#sidebar{
+    -fx-background-color: #7fe7dc;
+}
+#loginForm{
+    -fx-background-color: #7fe7dc;
+    -fx-padding: 50px;
+    -fx-background-radius: 25px;
+}
+.otherSide{
+ -fx-background-color: #316879;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* colors #316879, #f47a60, #7fe7dc, #ced7d8*/
+.table-view{
+   -fx-background-color: transparent;
+   -fx-background-border: 15px;
+}
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color:   #f47a60;
+}
+.table-view .column-header .label{
+   -fx-text-fill: white;
+   -fx-font-weight: bold;
+   -fx-alignment: CENTER_LEFT;
+}
+.table-view .cell{
+   -fx-cell-size: 35;
+  -fx-alignment: center-left;
+  -fx-background-color: #29292D;
+  -fx-border-color: #29292D;
+  -fx-text-fill: lightgray;
+  -fx-alignment: CENTER_LEFT;
+
+}
+.table-row-cell:selected {
+   -fx-background-color: whitesmoke;
+   -fx-text-background-color:  #6622CC;
+
+
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="1070.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUp">
+    <children>
+        <VBox id="sidebar" prefHeight="655.0" prefWidth="291.0" stylesheets="@style.css">
+            <children>
+                <Label alignment="CENTER" prefHeight="133.0" prefWidth="291.0" text="Maestro Airlines">
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Label>
+                <Line endX="184.6360321044922" endY="-20.71321678161621" startX="472.1004943847656" startY="-20.713354110717773" stroke="#316879" strokeWidth="5.0" />
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="234.0" prefWidth="291.0" text="Register">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <Pane layoutX="289.0" prefHeight="655.0" prefWidth="782.0" style="-fx-background-color: #316879;" styleClass="otherSide">
+            <children>
+                <Pane fx:id="signUpForm" layoutX="177.0" layoutY="61.0" prefHeight="572.0" prefWidth="510.0" stylesheets="@style.css">
+                    <children>
+                        <Label layoutX="182.0" layoutY="301.0" />
+                  <VBox layoutX="228.0" layoutY="8.0" prefHeight="347.0" prefWidth="273.0" spacing="20.0">
+                     <children>
+                        <TextField fx:id="firstname" alignment="CENTER" />
+                        <TextField fx:id="lastname" alignment="CENTER" />
+                        <TextField fx:id="username" alignment="CENTER" />
+                        <TextField fx:id="password" alignment="CENTER" />
+                        <TextField fx:id="passportNo" alignment="CENTER" />
+                        <TextField fx:id="phoneNo" alignment="CENTER" />
+                        <TextField fx:id="gender" alignment="CENTER" />
+                        <TextField fx:id="address" alignment="CENTER" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="-75.0" layoutY="10.0" prefHeight="333.0" prefWidth="265.0" spacing="18.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="137.0" text="First name">
+                           <font>
+                              <Font name="Consolas" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="26.0" prefWidth="141.0" text="Last Name">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="26.0" prefWidth="115.0" text="Username">
+                           <font>
+                              <Font name="Consolas" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="26.0" prefWidth="144.0" text="Password">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="26.0" prefWidth="255.0" text="Passport number">
+                           <font>
+                              <Font name="Consolas" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="26.0" prefWidth="240.0" text="Phone number">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="26.0" prefWidth="81.0" text="Gender">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="26.0" prefWidth="141.0" text="Address">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button layoutX="75.0" layoutY="420.0" mnemonicParsing="false" onAction="#registerUser" prefHeight="61.0" prefWidth="244.0" text="Register">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="loginLink" layoutX="53.0" layoutY="525.0" onMouseClicked="#gotoLogin" prefHeight="16.0" prefWidth="370.0" text="Already have an account? Click here to login" textFill="#f47a60" />
+                    </children>
+                </Pane>
+                  <Label alignment="CENTER" layoutX="9.0" layoutY="9.0" prefHeight="66.0" prefWidth="221.0" text="Register">
+                      <font>
+                          <Font name="System Bold" size="31.0" />
+                      </font>
+                  </Label>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

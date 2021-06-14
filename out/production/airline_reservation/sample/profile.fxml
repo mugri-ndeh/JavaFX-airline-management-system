@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:controller="sample.Profile" id="profileRightSide" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="821.0" style="-fx-background-color: #316879;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Pane id="profileRightSide" styleClass="otherside" stylesheets="@style.css" />
+        <Label layoutX="51.0" layoutY="28.0" text="Profile">
+            <font>
+                <Font name="Comic Sans MS Bold" size="32.0" />
+            </font>
+        </Label>
+        <Label layoutX="48.0" layoutY="101.0" text="Name">
+            <font>
+                <Font name="Berlin Sans FB" size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="profile_name" layoutX="274.0" layoutY="106.0" text="Label" />
+        <Label fx:id="no_of_flights" layoutX="274.0" layoutY="147.0" text="Label" />
+        <Label layoutX="48.0" layoutY="142.0" text="No of flights booked">
+            <font>
+                <Font name="Berlin Sans FB" size="20.0" />
+            </font>
+        </Label>
+    </children>
+</Pane>

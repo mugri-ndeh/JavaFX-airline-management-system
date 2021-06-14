@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="1070.0" style="-fx-background-color: #7fe7dc;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Welcome">
+    <children>
+        <Label layoutX="260.0" layoutY="54.0" prefHeight="155.0" prefWidth="551.0" text="Welcome! Log in to get started">
+            <font>
+                <Font name="Consolas Bold" size="29.0" />
+            </font>
+        </Label>
+        <Button id="loginA" layoutX="277.0" layoutY="299.0" mnemonicParsing="false" onAction="#loginAsAdmin" prefHeight="110.0" prefWidth="166.0" style="-fx-background-color: #f47a60;" stylesheets="@style.css" text="Login as admin" />
+        <Button id="loginB" layoutX="550.0" layoutY="299.0" mnemonicParsing="false" onAction="#loginAsPassenger" prefHeight="110.0" prefWidth="166.0" style="-fx-background-color: #316879;" stylesheets="@style.css" text="Login as passenger" />
+    </children>
+</AnchorPane>
