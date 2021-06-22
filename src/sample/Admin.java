@@ -1,6 +1,7 @@
 package sample;
 
 public class Admin {
-    final String name = "Chrome";
-    final String password = "password";
+    final static String name = "Chrome";
+    final static  String password = "password";
+
 }

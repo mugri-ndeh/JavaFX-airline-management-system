@@ -1,28 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
 
-<Pane fx:controller="sample.Profile" id="profileRightSide" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="821.0" style="-fx-background-color: #316879;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1000.0" styleClass="otherSide" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Profile">
     <children>
-        <Pane id="profileRightSide" styleClass="otherside" stylesheets="@style.css" />
-        <Label layoutX="51.0" layoutY="28.0" text="Profile">
-            <font>
-                <Font name="Comic Sans MS Bold" size="32.0" />
-            </font>
-        </Label>
-        <Label layoutX="48.0" layoutY="101.0" text="Name">
-            <font>
-                <Font name="Berlin Sans FB" size="20.0" />
-            </font>
-        </Label>
-        <Label fx:id="profile_name" layoutX="274.0" layoutY="106.0" text="Label" />
-        <Label fx:id="no_of_flights" layoutX="274.0" layoutY="147.0" text="Label" />
-        <Label layoutX="48.0" layoutY="142.0" text="No of flights booked">
-            <font>
-                <Font name="Berlin Sans FB" size="20.0" />
-            </font>
-        </Label>
+        <Pane id="flightRightSide" styleClass="otherSide" stylesheets="@style.css" />
+        <Label layoutX="14.0" layoutY="14.0" prefHeight="16.0" prefWidth="231.0" text="Add flights to database" />
+        <TableView fx:id="flight_tbl" layoutX="8.0" layoutY="76.0" onMouseClicked="#getItem" prefHeight="113.0" prefWidth="907.0">
+            <columns>
+                <TableColumn fx:id="tbl_username" prefWidth="258.6666564941406" text="Username" />
+                <TableColumn fx:id="tbl_flight_id" prefWidth="259.6666564941406" text="Flight id" />
+                <TableColumn fx:id="tbl_num_of_seats" prefWidth="253.33334350585938" text="No of seats" />
+            </columns>
+            <styleClass>
+                <String fx:value="table-row-cell" />
+                <String fx:value="table-view" />
+            </styleClass>
+        </TableView>
+        <Button layoutX="317.0" layoutY="259.0" mnemonicParsing="false" onAction="#updateFlight" text="Update " />
+        <Button layoutX="492.0" layoutY="259.0" mnemonicParsing="false" onAction="#deleteFlightt" text="Delete" />
+        <HBox layoutX="128.0" layoutY="-28.0" prefHeight="100.0" prefWidth="200.0" />
+        <HBox layoutX="9.0" layoutY="39.0" prefHeight="37.0" prefWidth="802.0">
+            <children>
+                <TextField fx:id="username" promptText="Username">
+                    <HBox.margin>
+                        <Insets right="5.0" />
+                    </HBox.margin>
+                </TextField>
+                <ComboBox fx:id="flight_id" prefWidth="150.0" promptText="Flight id">
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </ComboBox>
+                <TextField fx:id="num_of_seats" prefHeight="24.0" prefWidth="192.0" promptText="Number of seats" />
+                <Button mnemonicParsing="false" onAction="#clear" text="clear">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
     </children>
 </Pane>

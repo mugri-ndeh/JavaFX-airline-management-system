@@ -12,8 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main extends Application {
-    public static List<Stage>stageval = new ArrayList<Stage>();
-    public static List<String> fxmlval = new ArrayList<String>();
     Button button;
 
     @Override

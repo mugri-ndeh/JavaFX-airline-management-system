@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/sample/AdminBook.java" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/sample/AdminFlights.java" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/sample/AdminUsers.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/sample/GenFunctions.java" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/sample/Profile.java" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/sample/SignUp.java" dialect="PostgreSQL" />
+  </component>
+</project>

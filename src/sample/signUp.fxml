@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -33,14 +34,14 @@
                         <Label layoutX="182.0" layoutY="301.0" />
                   <VBox layoutX="228.0" layoutY="8.0" prefHeight="347.0" prefWidth="273.0" spacing="20.0">
                      <children>
-                        <TextField fx:id="firstname" alignment="CENTER" />
-                        <TextField fx:id="lastname" alignment="CENTER" />
-                        <TextField fx:id="username" alignment="CENTER" />
-                        <TextField fx:id="password" alignment="CENTER" />
-                        <TextField fx:id="passportNo" alignment="CENTER" />
-                        <TextField fx:id="phoneNo" alignment="CENTER" />
-                        <TextField fx:id="gender" alignment="CENTER" />
-                        <TextField fx:id="address" alignment="CENTER" />
+                        <TextField fx:id="firstname" promptText="first anme" />
+                        <TextField fx:id="lastname" promptText="last name" />
+                        <TextField fx:id="username" promptText="username" />
+                        <TextField fx:id="password" promptText="password" />
+                        <TextField fx:id="passportNo" promptText="passport number" />
+                        <TextField fx:id="phoneNo" promptText="phone number" />
+                        <ComboBox fx:id="gender" prefHeight="24.0" prefWidth="276.0" promptText="Gender" />
+                        <TextField fx:id="address" promptText="address" />
                      </children>
                   </VBox>
                   <VBox layoutX="-75.0" layoutY="10.0" prefHeight="333.0" prefWidth="265.0" spacing="18.0">

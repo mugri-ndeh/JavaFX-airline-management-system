@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1000.0" styleClass="otherSide" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminUsers">
+    <children>
+        <Pane id="flightRightSide" styleClass="otherSide" stylesheets="@style.css" />
+      <TableView fx:id="user_tbl" layoutX="167.0" layoutY="65.0" onMouseClicked="#reset" prefHeight="391.0" prefWidth="819.0">
+        <columns>
+          <TableColumn fx:id="tbl_first_name" prefWidth="116.99998474121094" text="First name" />
+          <TableColumn fx:id="tbl_last_name" prefWidth="102.00001525878906" text="Last name" />
+            <TableColumn fx:id="tbl_username" prefWidth="127.66665649414062" text="username" />
+            <TableColumn fx:id="tbl_passport_num" prefWidth="98.66668701171875" text="passportNo" />
+            <TableColumn fx:id="tbl_phone_num" prefWidth="106.6666259765625" text="PhoneNo" />
+            <TableColumn fx:id="tbl_gender" prefWidth="105.33331298828125" text="Gender" />
+            <TableColumn fx:id="tbl_address" prefWidth="163.0" text="Address" />
+        </columns>
+      </TableView>
+      <VBox layoutX="6.0" layoutY="90.0" prefHeight="347.0" prefWidth="154.0">
+         <children>
+            <TextField fx:id="first_name" promptText="First name">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="last_name" layoutX="10.0" layoutY="10.0" promptText="Last name">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <PasswordField fx:id="pass_word" promptText="password">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </PasswordField>
+            <TextField fx:id="username" layoutX="10.0" layoutY="34.0" promptText="username">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="passport_num" layoutX="10.0" layoutY="82.0" promptText="passportNo">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="phone_num" layoutX="10.0" layoutY="106.0" promptText="phoneNo">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="address" layoutX="10.0" layoutY="154.0" promptText="address">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin></TextField>
+            <ComboBox fx:id="gender_sel" onMouseClicked="#drop" prefWidth="150.0" promptText="Gender">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </ComboBox>
+         </children>
+      </VBox>
+      <Button layoutX="373.0" layoutY="475.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete" />
+      <Button layoutX="461.0" layoutY="473.0" mnemonicParsing="false" onAction="#updateUser" text="Update" />
+      <Button layoutX="20.0" layoutY="437.0" mnemonicParsing="false" onAction="#addUser" text="Add" />
+      <Button layoutX="100.0" layoutY="437.0" mnemonicParsing="false" onAction="#clear" text="clear" />
+    </children>
+</Pane>

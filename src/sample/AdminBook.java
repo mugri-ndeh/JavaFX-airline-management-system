@@ -15,9 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import static sample.Controller.passenger1;
+public class AdminBook implements Initializable {
 
-public class Profile implements Initializable {
     @FXML
     TextField username;
     @FXML
@@ -38,7 +37,6 @@ public class Profile implements Initializable {
     @FXML
     TableColumn<Booked, String> tbl_username;
 
-    Passenger user;
 
 
     @Override
@@ -70,20 +68,21 @@ public class Profile implements Initializable {
     @FXML
     void addUserFlight(ActionEvent event){
         String sql = "UPDATE user_tbl SET flight_id = ? WHERE username = ?";
-        try{
-            conn = new Driver().getConnection();
-            PreparedStatement query = conn.prepareStatement(sql);
-            query.setString(1, flight_id.getSelectionModel().getSelectedItem());
-            query.setString(2, username.getText());
-            query.executeUpdate();
-            bookFlight();
-            query.close();
-            conn.close();
+       try{
+           conn = new Driver().getConnection();
+           PreparedStatement query = conn.prepareStatement(sql);
+           query.setString(1, flight_id.getSelectionModel().getSelectedItem());
+           query.setString(2, username.getText());
+           query.executeUpdate();
+           bookFlight();
+           query.close();
+           conn.close();
 
-            showBooked();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+           alert("Success");
+           showBooked();
+       } catch (SQLException e) {
+           e.printStackTrace();
+       }
     }
     @FXML
     void deleteFlightt(ActionEvent event) {
@@ -92,9 +91,11 @@ public class Profile implements Initializable {
             String sql = "DELETE FROM booked WHERE flight_id = ?";
             PreparedStatement query = conn.prepareStatement(sql);
             query.setString(1,flight_tbl.getSelectionModel().getSelectedItem().getFlight_id());
+
             query.executeUpdate();
             conn.close();
             update_user_tbl();
+            alert("Deleted successfully");
             showBooked();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -114,6 +115,7 @@ public class Profile implements Initializable {
             query.setString(4, flight_tbl.getSelectionModel().getSelectedItem().getUsername());
             query.executeUpdate();
 
+            alert("Successfully updated");
             showBooked();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -159,13 +161,12 @@ public class Profile implements Initializable {
     public ObservableList<Booked> getBooked(){
         ObservableList<Booked> bookeds = FXCollections.observableArrayList();
         conn = new Driver().getConnection();
-        String sql = "SELECT * FROM booked WHERE username = ?";
-
+        String sql = "SELECT * FROM booked";
+        Statement query;
+        ResultSet result;
         try{
-            PreparedStatement query = conn.prepareStatement(sql);
-            query.setString(1,passenger1.getUsername());
-            ResultSet result;
-            result = query.executeQuery();
+            query = conn.createStatement();
+            result = query.executeQuery(sql);
             Booked booked;
             while (result.next()){
                 booked = new Booked(
@@ -193,35 +194,28 @@ public class Profile implements Initializable {
     }
 
     void bookFlight(){
-        if(!username.getText().equals(passenger1.getUsername())){
-            System.out.println("Please input your username");
-        }
-        else {
-            try {
-                conn = new Driver().getConnection();
-                String sql = "INSERT INTO booked (username, flight_id, num_of_seats) VALUES (?,?,?)";
-                PreparedStatement query = conn.prepareStatement(sql);
-                query.setString(1, username.getText());
-                query.setString(2, flight_id.getSelectionModel().getSelectedItem());
-                query.setInt(3, Integer.parseInt(num_of_seats.getText()));
-                query.executeUpdate();
-                conn.close();
-                showBooked();
+        try{
+            conn = new Driver().getConnection();
+            String sql = "INSERT INTO booked (username, flight_id, num_of_seats) VALUES (?,?,?)";
+            PreparedStatement query = conn.prepareStatement(sql);
+            query.setString(1, username.getText());
+            query.setString(2, flight_id.getSelectionModel().getSelectedItem());
+            query.setInt(3, Integer.parseInt(num_of_seats.getText()));
+            query.executeUpdate();
+            conn.close();
+            showBooked();
 
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
-            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
         }
     }
 
-    void getUser(Passenger passenger){
-        user = passenger;
+    void alert(String message){
+        Alert alert = new Alert(Alert.AlertType.NONE);
+        alert.setAlertType(Alert.AlertType.INFORMATION);
+        alert.setContentText(message);
+        alert.show();
     }
+
+
 }
-
-
-
-
-
-
-

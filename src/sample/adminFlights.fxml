@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1000.0" styleClass="otherSide" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminFlights">
+    <children>
+        <Pane id="flightRightSide" styleClass="otherSide" stylesheets="@style.css" />
+      <VBox layoutX="14.0" layoutY="56.0" prefHeight="298.0" prefWidth="161.0">
+         <children>
+            <TextField fx:id="flightID" promptText="Fight Id">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="source" promptText="Source">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="destination" promptText="Destination">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <DatePicker fx:id="date" promptText="Date">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </DatePicker>
+            <TextField fx:id="deptTime" promptText="Departure Time">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="arrivalTime" promptText="Arrival Time">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="noOfSeats" promptText="Number of seats">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="cost" promptText="Cost" />
+         </children>
+      </VBox>
+      <Button layoutX="14.0" layoutY="399.0" mnemonicParsing="false" onAction="#addFlight" text="Add " />
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="16.0" prefWidth="231.0" text="Add flights to database" />
+      <TableView fx:id="flight_tbl" layoutX="199.0" layoutY="56.0" onMouseClicked="#getItem" prefHeight="298.0" prefWidth="789.0">
+        <columns>
+          <TableColumn fx:id="tbl_flight_id" prefWidth="63.33331298828125" text="Flightid" />
+          <TableColumn fx:id="tbl_source" prefWidth="58.666656494140625" text="Source" />
+            <TableColumn fx:id="tbl_destination" prefWidth="100.66668701171875" text="Destination" />
+            <TableColumn fx:id="tbl_date" prefWidth="124.33331298828125" text="Date" />
+            <TableColumn fx:id="tbl_departure_time" prefWidth="110.66668701171875" text="Dept Time" />
+            <TableColumn fx:id="tbl_arrival_time" prefWidth="97.33331298828125" text="Arr Time" />
+            <TableColumn fx:id="tbl_num_of_seats" prefWidth="114.6666259765625" text="No of seats" />
+            <TableColumn fx:id="tbl_cost" prefWidth="117.66668701171875" text="Cost" />
+        </columns>
+         <styleClass>
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </TableView>
+      <Button layoutX="397.0" layoutY="401.0" mnemonicParsing="false" onAction="#updateFlight" text="Update" />
+      <Button layoutX="517.0" layoutY="399.0" mnemonicParsing="false" onAction="#deleteFlight" text="Delete" />
+      <Button layoutX="78.0" layoutY="399.0" mnemonicParsing="false" onAction="#clear" text="Clear" />
+    </children>
+</Pane>

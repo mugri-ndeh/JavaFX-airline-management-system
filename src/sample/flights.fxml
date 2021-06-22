@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.UserFlightController">
     <children>
         <Pane id="flightRightSide">
             <children>
@@ -19,25 +22,42 @@
                                 <Font name="Comic Sans MS Bold" size="28.0" />
                             </font>
                         </Label>
-                        <TableView prefHeight="470.0" prefWidth="693.0" stylesheets="@style.css">
+                        <TableView fx:id="flight_tbl" prefHeight="360.0" prefWidth="821.0" stylesheets="@style.css">
                             <columns>
-                                <TableColumn prefWidth="75.0" text="FlightID" />
-                                <TableColumn prefWidth="116.0" text="Flight Name" />
-                                <TableColumn prefWidth="77.0" text="From" />
-                                <TableColumn prefWidth="66.0" text="To" />
-                                <TableColumn prefWidth="93.0" text="Date" />
-                                <TableColumn prefWidth="140.0" text="Departure time" />
-                                <TableColumn prefWidth="123.0" text="Arrival Time" />
-                                <TableColumn prefWidth="118.0" text="Amount" />
+                                <TableColumn fx:id="tbl_flight_id" prefWidth="101.0" text="FlightID" />
+                                <TableColumn fx:id="tbl_source" prefWidth="86.0" text="Source" />
+                                <TableColumn fx:id="tbl_destination" prefWidth="117.0" text="Destination" />
+                                <TableColumn fx:id="tbl_date" prefWidth="79.0" text="Date" />
+                                <TableColumn fx:id="tbl_departure_time" prefWidth="133.0" text="Departure time" />
+                                <TableColumn fx:id="tbl_arrival_time" prefWidth="104.0" text="Arrival Time" />
+                                <TableColumn fx:id="tbl_cost" text="Cost" />
+                        <TableColumn fx:id="tbl_num_of_seats" prefWidth="296.0" text="No.Seats" />
                             </columns>
                         </TableView>
+                  <HBox prefHeight="52.0" prefWidth="821.0">
+                     <children>
+                        <TextField fx:id="flight_id" promptText="Flight ID">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="num_of_seats" promptText="Number of seats">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#bookFlight" prefHeight="45.0" prefWidth="107.0" stylesheets="@style.css" text="Book Now!">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="50.0" right="50.0" top="10.0" />
+                     </padding>
+                  </HBox>
                     </children>
                 </VBox>
-            <Button layoutX="350.0" layoutY="520.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="107.0" stylesheets="@style.css" text="Book Now!">
-               <font>
-                  <Font name="System Bold Italic" size="13.0" />
-               </font>
-            </Button>
             </children>
         </Pane>
     </children>

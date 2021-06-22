@@ -37,30 +37,6 @@
                         </Label>
                     </graphic>
                 </Button>
-                <Button layoutX="10.0" layoutY="115.0" mnemonicParsing="false" onAction="#gotoBooked" prefHeight="78.0" prefWidth="245.0">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                    <graphic>
-                        <Label prefHeight="21.0" prefWidth="153.0" text="Flights booked">
-                            <font>
-                                <Font size="18.0" />
-                            </font>
-                        </Label>
-                    </graphic>
-                </Button>
-                <Button layoutX="10.0" layoutY="205.0" mnemonicParsing="false" onAction="#gotoHistory" prefHeight="78.0" prefWidth="245.0">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                    <graphic>
-                        <Label prefHeight="21.0" prefWidth="148.0" text="History">
-                            <font>
-                                <Font size="18.0" />
-                            </font>
-                        </Label>
-                    </graphic>
-                </Button>
                 <Button layoutX="10.0" layoutY="193.0" mnemonicParsing="false" onAction="#gotoProfile" prefHeight="78.0" prefWidth="245.0">
                     <font>
                         <Font size="18.0" />
